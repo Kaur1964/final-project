@@ -1,4 +1,4 @@
-/* ================= GLOBAL ================= */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -6,60 +6,53 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: Arial;
 }
 
-.container {
-    width: 90%;
-    margin: auto;
+/* COLORS */
+:root {
+    --gold: #c78c07;
+    --light-yellow: #ffe6ac;
 }
 
 /* ================= HEADER ================= */
 .header {
     background: #222;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
     padding: 10px 0;
 }
 
-/* FLEX CONTAINER */
-.nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    margin: auto;
-}
-
-/* LOGO */
 .logo img {
     width: 70px;
 }
 
-/* NAV LIST */
 .nav ul {
     display: flex;
-    list-style: none;   /* removes bullets */
+    list-style: none;
 }
 
-/* NAV ITEMS */
 .nav li {
     margin: 0 10px;
 }
 
-/* NAV LINKS */
 .nav a {
-    color: #c78c06;
+    color: var(--gold);
     text-decoration: none;
     padding: 10px 15px;
 }
 
-/* ACTIVE BUTTON */
 .nav li.active a {
-    background: #c78c06;
+    background: var(--gold);
     color: black;
 }
 
-/* SEARCH BAR */
 .search {
     display: flex;
 }
@@ -70,11 +63,10 @@ body {
 
 .search button {
     background: #222;
-    border: 1px solid #c78c06;
-    color: #c78c06;
-    padding: 6px;
-    cursor: pointer;
+    border: 1px solid var(--gold);
+    color: var(--gold);
 }
+
 /* ================= HERO ================= */
 .hero {
     position: relative;
@@ -88,18 +80,28 @@ body {
     position: absolute;
     top: 30%;
     left: 10%;
-    color: #fff;
+    color: white;
 }
 
 .btn {
-    background: #c78c06;
-    padding: 10px 15px;
-    color: #000;
+    background: var(--gold);
+    padding: 10px;
     text-decoration: none;
     display: inline-block;
 }
 
+/* ================= CONTAINER ================= */
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 30px 0;
+}
+
 /* ================= ABOUT ================= */
+.about {
+    background: var(--light-yellow);
+}
+
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -107,10 +109,25 @@ body {
 }
 
 /* ================= SERVICES ================= */
-.services-grid {
+.services {
+    background: var(--light-yellow);
+}
+
+.services-row-two {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
+    margin-bottom: 20px;
+}
+
+.services-row-three {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.service-card {
+    padding: 10px;
 }
 
 .service-card img {
@@ -119,20 +136,16 @@ body {
 
 .btn-dark {
     background: #222;
-    color: #fff;
+    color: white;
     padding: 10px;
     display: inline-block;
-    text-decoration: none;
-}
-
-/* ================= VISION ================= */
-.vision {
-    background: url('../images/vision.jpg') no-repeat center/cover;
-    color: #fff;
-    padding: 50px 0;
 }
 
 /* ================= TEAM ================= */
+.team {
+    background: var(--light-yellow);
+}
+
 .team-member {
     display: flex;
     margin: 20px 0;
@@ -142,8 +155,13 @@ body {
     width: 50%;
 }
 
-.team-member.reverse {
-    flex-direction: row-reverse;
+.team-text {
+    padding: 20px;
+}
+
+.role {
+    border-bottom: 2px solid var(--gold);
+    margin-bottom: 10px;
 }
 
 /* ================= CONTACT ================= */
@@ -153,6 +171,11 @@ body {
     gap: 20px;
 }
 
+.address {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -160,7 +183,7 @@ body {
     padding: 8px;
 }
 
-/* ================= TABLE ================= */
+/* TABLE */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -171,28 +194,52 @@ th, td {
     padding: 10px;
 }
 
+thead {
+    background: var(--light-yellow);
+}
+
 /* ================= FOOTER ================= */
 .footer {
     background: #222;
-    color: #fff;
+    color: white;
     text-align: center;
     padding: 20px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
-    .nav ul {
+    .nav-container {
         flex-direction: column;
     }
 
+    .nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav li:first-child {
+        background: var(--gold);
+    }
+
+    .nav li:first-child a {
+        color: black;
+    }
+
     .about-grid,
-    .services-grid,
+    .services-row-two,
+    .services-row-three,
     .contact-grid {
         grid-template-columns: 1fr;
     }
 
     .team-member {
         flex-direction: column;
+    }
+
+    .hero-content {
+        position: static;
+        background: rgba(0,0,0,0.7);
+        padding: 20px;
     }
 }
