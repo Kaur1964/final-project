@@ -15,13 +15,13 @@ body {
     --light-yellow: #ffe6ac;
 }
 
-/* GLOBAL IMAGE FIX */
+/* GLOBAL */
 img {
     max-width: 100%;
     display: block;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 .header {
     background: #222;
 }
@@ -44,10 +44,6 @@ img {
     list-style: none;
 }
 
-.nav li {
-    margin: 0 10px;
-}
-
 .nav a {
     color: var(--gold);
     text-decoration: none;
@@ -59,27 +55,13 @@ img {
     color: black;
 }
 
-.search {
-    display: flex;
-}
-
 .search input {
     padding: 6px;
 }
 
-.search button {
-    background: #222;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-}
-
-/* ================= HERO ================= */
+/* HERO */
 .hero {
     position: relative;
-}
-
-.hero img {
-    width: 100%;
 }
 
 .hero-content {
@@ -89,14 +71,20 @@ img {
     color: white;
 }
 
-/* ================= CONTAINER ================= */
+.btn {
+    background: var(--gold);
+    padding: 10px;
+    text-decoration: none;
+}
+
+/* CONTAINER */
 .container {
     width: 90%;
     margin: auto;
     padding: 30px 0;
 }
 
-/* ================= ABOUT ================= */
+/* ABOUT */
 .about {
     background: var(--light-yellow);
 }
@@ -105,10 +93,9 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    align-items: center;
 }
 
-/* ================= SERVICES ================= */
+/* SERVICES */
 .services {
     background: var(--light-yellow);
 }
@@ -125,20 +112,13 @@ img {
     gap: 20px;
 }
 
-.service-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .btn-dark {
     background: #222;
     color: white;
     padding: 10px;
-    display: inline-block;
 }
 
-/* ================= TEAM ================= */
+/* TEAM */
 .team {
     background: var(--light-yellow);
 }
@@ -146,10 +126,6 @@ img {
 .team-member {
     display: flex;
     margin: 20px 0;
-}
-
-.team-member img {
-    max-width: 500px;
 }
 
 .team-text {
@@ -160,7 +136,7 @@ img {
     border-bottom: 2px solid var(--gold);
 }
 
-/* ================= CONTACT ================= */
+/* CONTACT */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -174,14 +150,18 @@ img {
     padding: 8px;
 }
 
-.address {
-    margin-bottom: 10px;
-    font-weight: bold;
+/* SEND BUTTON FIX */
+.btn-send {
+    background: #000;
+    color: var(--gold);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
 }
 
-/* TABLE FIX */
+/* TABLE */
 .hours table thead tr {
-    background: #ffe6ac !important;
+    background: #ffe6ac;
 }
 
 table {
@@ -194,26 +174,23 @@ th, td {
     padding: 10px;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER FIX */
 .footer {
     background: #222;
-    color: white;
-    text-align: center;
+    color: var(--gold);
+    text-align: left;
     padding: 20px;
 }
 
-/* ================= MOBILE ================= */
+.footer a {
+    color: var(--gold);
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
 
     .nav-container {
         flex-direction: column;
-        align-items: stretch;
-    }
-
-    .logo {
-        background: var(--gold);
-        text-align: center;
-        padding: 15px;
     }
 
     .nav ul {
@@ -227,15 +204,6 @@ th, td {
 
     .nav li.active a {
         color: black;
-    }
-
-    .search {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .search input {
-        width: 100%;
     }
 
     .about-grid,
