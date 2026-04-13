@@ -15,12 +15,6 @@ body {
     --light-yellow: #ffe6ac;
 }
 
-/* GLOBAL IMAGE FIX */
-img {
-    max-width: 100%;
-    display: block;
-}
-
 /* ================= HEADER ================= */
 .header {
     background: #222;
@@ -89,6 +83,13 @@ img {
     color: white;
 }
 
+.btn {
+    background: var(--gold);
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
 /* ================= CONTAINER ================= */
 .container {
     width: 90%;
@@ -105,7 +106,6 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    align-items: center;
 }
 
 /* ================= SERVICES ================= */
@@ -117,18 +117,21 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    margin-bottom: 20px;
 }
 
 .services-row-three {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 }
 
 .service-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 10px;
+}
+
+.service-card img {
+    width: 100%;
 }
 
 .btn-dark {
@@ -149,7 +152,7 @@ img {
 }
 
 .team-member img {
-    max-width: 500px;
+    width: 50%;
 }
 
 .team-text {
@@ -158,6 +161,7 @@ img {
 
 .role {
     border-bottom: 2px solid var(--gold);
+    margin-bottom: 10px;
 }
 
 /* ================= CONTACT ================= */
@@ -167,6 +171,11 @@ img {
     gap: 20px;
 }
 
+.address {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -174,16 +183,7 @@ img {
     padding: 8px;
 }
 
-.address {
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-/* TABLE FIX */
-.hours table thead tr {
-    background: #ffe6ac !important;
-}
-
+/* TABLE */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -194,11 +194,15 @@ th, td {
     padding: 10px;
 }
 
+thead {
+    background: var(--light-yellow);
+}
+
 /* ================= FOOTER ================= */
 .footer {
     background: #222;
-    color: --var(gold);
-    text-align: left;
+    color: white;
+    text-align: center;
     padding: 20px;
 }
 
@@ -207,13 +211,6 @@ th, td {
 
     .nav-container {
         flex-direction: column;
-        align-items: stretch;
-    }
-
-    .logo {
-        background: var(--gold);
-        text-align: center;
-        padding: 15px;
     }
 
     .nav ul {
@@ -221,21 +218,12 @@ th, td {
         text-align: center;
     }
 
-    .nav li.active {
+    .nav li:first-child {
         background: var(--gold);
     }
 
-    .nav li.active a {
+    .nav li:first-child a {
         color: black;
-    }
-
-    .search {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .search input {
-        width: 100%;
     }
 
     .about-grid,
