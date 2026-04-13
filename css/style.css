@@ -1,0 +1,170 @@
+/* ================= GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* ================= HEADER ================= */
+.header {
+    background: #222;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav a {
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.nav a.active {
+    background: #c78c06;
+}
+
+.search input {
+    padding: 5px;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+}
+
+.hero-content {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    color: #fff;
+}
+
+.btn {
+    background: #c78c06;
+    padding: 10px 15px;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* ================= ABOUT ================= */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* ================= SERVICES ================= */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.service-card img {
+    width: 100%;
+}
+
+.btn-dark {
+    background: #222;
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* ================= VISION ================= */
+.vision {
+    background: url('../images/vision.jpg') no-repeat center/cover;
+    color: #fff;
+    padding: 50px 0;
+}
+
+/* ================= TEAM ================= */
+.team-member {
+    display: flex;
+    margin: 20px 0;
+}
+
+.team-member img {
+    width: 50%;
+}
+
+.team-member.reverse {
+    flex-direction: row-reverse;
+}
+
+/* ================= CONTACT ================= */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+/* ================= TABLE ================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .about-grid,
+    .services-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-member {
+        flex-direction: column;
+    }
+}
