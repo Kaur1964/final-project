@@ -197,8 +197,8 @@ th, td {
 /* ================= FOOTER ================= */
 .footer {
     background: #222;
-    color: white;
-    text-align: center;
+    color: --var(gold);
+    text-align: left;
     padding: 20px;
 }
 
