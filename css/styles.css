@@ -18,35 +18,63 @@ body {
 /* ================= HEADER ================= */
 .header {
     background: #222;
-    color: #fff;
     padding: 10px 0;
 }
 
+/* FLEX CONTAINER */
 .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 90%;
+    margin: auto;
 }
 
+/* LOGO */
+.logo img {
+    width: 70px;
+}
+
+/* NAV LIST */
 .nav ul {
     display: flex;
-    list-style: none;
+    list-style: none;   /* removes bullets */
 }
 
+/* NAV ITEMS */
+.nav li {
+    margin: 0 10px;
+}
+
+/* NAV LINKS */
 .nav a {
-    color: #fff;
-    padding: 10px;
+    color: #c78c06;
     text-decoration: none;
+    padding: 10px 15px;
 }
 
-.nav a.active {
+/* ACTIVE BUTTON */
+.nav li.active a {
     background: #c78c06;
+    color: black;
+}
+
+/* SEARCH BAR */
+.search {
+    display: flex;
 }
 
 .search input {
-    padding: 5px;
+    padding: 6px;
 }
 
+.search button {
+    background: #222;
+    border: 1px solid #c78c06;
+    color: #c78c06;
+    padding: 6px;
+    cursor: pointer;
+}
 /* ================= HERO ================= */
 .hero {
     position: relative;
